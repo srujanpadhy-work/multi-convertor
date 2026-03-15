@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="unit1.css">
+</head>
+<body>
+
+  <!-- Back Button -->
+<a href="newhome.html" class="back-button">
+    <span class="arrow">←</span>
+    <span class="text">Back</span>
+</a>
+  <div class="container">
+    <h1>Unit Converter</h1>
+    <div class="converter">
+      <label for="inputValue">Enter Value:</label>
+      <input type="number" id="inputValue" placeholder="Enter value" oninput="convertUnit()">
+      
+      <label for="inputUnit">From:</label>
+      <select id="inputUnit" onchange="convertUnit()">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+      </select>
+
+      <label for="outputUnit">To:</label>
+      <select id="outputUnit" onchange="convertUnit()">
+        <option value="km">Kilometers</option>
+        <option value="m">Meters</option>
+        <option value="cm">Centimeters</option>
+        <option value="mm">Millimeters</option>
+      </select>
+
+      <p id="outputResult">Converted Value: <span id="result">0</span></p>
+    </div>
+  </div>
+
+  <script src="unit2.js"></script>
+</body>
+</html>
